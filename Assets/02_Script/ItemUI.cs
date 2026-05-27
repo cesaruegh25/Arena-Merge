@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -10,14 +11,27 @@ public class ItemUI : MonoBehaviour
 
     void Start()
     {
-        GetComponent<Image>().sprite = data.sprite;
+        Image img =
+        GetComponent<Image>();
+
+        img.sprite =
+        data.sprite;
 
         RectTransform rt =
         GetComponent<RectTransform>();
 
+        float size =
+        GridManager.Instance.cellSize;
+
+        // tamaño real según slots
         rt.sizeDelta =
         new Vector2(
-        data.width * 64,
-        data.height * 64);
+            data.width * size,
+            data.height * size
+        );
+
+        // anclar arriba izquierda
+        rt.pivot =
+        new Vector2(0, 1);
     }
 }

@@ -86,8 +86,8 @@ public class GridManager : MonoBehaviour
         panel.rect.height / 2;
 
         return new Vector2(
-            startX + x * cellSize + cellSize / 2,
-            startY - y * cellSize - cellSize / 2
+            startX + x * cellSize,
+            startY - y * cellSize
         );
     }
 }

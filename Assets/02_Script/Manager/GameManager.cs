@@ -33,7 +33,10 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if(health <= 0)
+        {
+            Time.timeScale = 0; // Detiene el juego
+        }
     }
     public void GameBegin()
     {

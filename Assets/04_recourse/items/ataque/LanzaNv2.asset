@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f138c008ac5744f4f98bacfa301276aa, type: 3}
-  m_Name: Espada
+  m_Name: LanzaNv2
   m_EditorClassIdentifier: Assembly-CSharp::ItemData
-  itemName: Espada
-  sprite: {fileID: 21300000, guid: c0a2f49e789dd974486b4c6234afebe6, type: 3}
-  width: 1
-  height: 2
-  level: 1
-  nextLevelItem: {fileID: 11400000, guid: a3f362a123077b547ac519b005bda304, type: 2}
+  itemName: Lanza
+  sprite: {fileID: 10911, guid: 0000000000000000f000000000000000, type: 0}
+  width: 3
+  height: 1
+  level: 2
+  nextLevelItem: {fileID: 0}

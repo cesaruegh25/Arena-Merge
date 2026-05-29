@@ -14,6 +14,7 @@ IEndDragHandler
 
     ItemUI item;
 
+    public ItemData itemData;
     Transform tienda;
 
     void Awake()
@@ -44,8 +45,7 @@ IEndDragHandler
         Mouse.current.position.ReadValue();
     }
 
-    public void OnEndDrag(
-    PointerEventData eventData)
+    public void OnEndDrag(PointerEventData eventData)
     {
         cg.blocksRaycasts = true;
 
@@ -73,28 +73,38 @@ IEndDragHandler
         int y = Mathf.FloorToInt(
         (startY - localPoint.y) / size);
 
+        // PRIMERO mirar si hay item debajo
+        DraggableItem otherItem =
+        GetItemUnderMouse(eventData);
+
+        if (otherItem != null &&
+            otherItem != this &&
+            otherItem.item.data == item.data)
+        {
+            MergeWith(otherItem);
+            return;
+        }
+
+        // DESPUÉS intentar colocar
         if (GridManager.Instance.CanPlace(item, x, y))
         {
             GridManager.Instance.Place(item, x, y);
 
-            // mover el objeto al contenedor de la mochila
             transform.SetParent(
-            GridManager.Instance.transform.Find("ItemsContainer")
-            );
+            GridManager.Instance.transform
+            .Find("ItemsContainer"));
 
-            // mantener escala correcta
-            transform.localScale = Vector3.one;
+            transform.localScale =
+            Vector3.one;
 
-            // colocarlo dentro de la mochila
             transform.localPosition =
-            GridManager.Instance.GetPosition(x, y);
+            GridManager.Instance
+            .GetPosition(x, y);
         }
         else
         {
-            // mover a la tienda
-            transform.SetParent(
-            tienda
-            );
+            // volver a tienda
+            transform.SetParent(tienda);
 
             transform.localScale =
             Vector3.one;
@@ -102,6 +112,73 @@ IEndDragHandler
             item.currentX = -1;
             item.currentY = -1;
         }
-        Debug.Log("x:" + x + " y:" + y);
+    }
+    private DraggableItem GetItemUnderMouse(PointerEventData eventData)
+    {
+        Debug.Log("Raycast para detectar item bajo el mouse" + eventData);
+        var results =
+            new System.Collections.Generic.List<RaycastResult>();
+
+        UnityEngine.EventSystems.EventSystem.current
+            .RaycastAll(eventData, results);
+
+        foreach (RaycastResult result in results)
+        {
+            DraggableItem other =
+                result.gameObject
+                .GetComponent<DraggableItem>();
+
+            if (other != null &&
+                other != this)
+            {
+                return other;
+            }
+        }
+
+        return null;
+    }
+
+    private void MergeWith(DraggableItem other)
+    {
+        if (item.data.nextLevelItem == null)
+            return;
+
+        Vector3 pos = other.transform.position;
+
+        GridManager.Instance.Remove(other.item);
+        GridManager.Instance.Remove(item);
+
+        Destroy(other.gameObject);
+        Destroy(gameObject);
+
+        GameObject newObj = Instantiate(
+            GridManager.Instance.itemPrefab,
+            pos,
+            Quaternion.identity,
+            other.transform.parent
+        );
+
+        DraggableItem draggable =
+            newObj.GetComponent<DraggableItem>();
+
+        draggable.item.data =
+            item.data.nextLevelItem;
+
+        UnityEngine.UI.Image img =
+            newObj.GetComponent<UnityEngine.UI.Image>();
+
+        img.sprite =
+            item.data.nextLevelItem.sprite;
+
+        RectTransform rt =
+            newObj.GetComponent<RectTransform>();
+
+        rt.sizeDelta = new Vector2(
+            item.data.nextLevelItem.width *
+            GridManager.Instance.cellSize,
+
+            item.data.nextLevelItem.height *
+            GridManager.Instance.cellSize
+        );
     }
 }

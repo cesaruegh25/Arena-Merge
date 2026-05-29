@@ -12,6 +12,8 @@ public class GridManager : MonoBehaviour
 
     bool[,] occupied;
 
+    public GameObject itemPrefab;
+
     void Awake()
     {
         Instance = this;

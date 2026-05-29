@@ -14,7 +14,6 @@ IEndDragHandler
 
     ItemUI item;
 
-    public ItemData itemData;
     Transform tienda;
 
     void Awake()

@@ -9,10 +9,12 @@ public class ItemSpawner : MonoBehaviour
 
     public int amount = 5;
 
+    [SerializeField] int intentos;
 
     void Start()
     {
         SpawnItems();
+        intentos = 3;
     }
     public void SpawnItems()
     {
@@ -48,8 +50,15 @@ public class ItemSpawner : MonoBehaviour
                 transform.GetChild(i).gameObject
             );
         }
-
-        // generar nuevos
-        SpawnItems();
+        if (intentos > 0)
+        {
+            intentos--;
+            // generar nuevos
+            SpawnItems();
+        }
+        else
+        {
+            Debug.Log("No more attempts left!");
+        }
     }
 }

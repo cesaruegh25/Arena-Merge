@@ -83,6 +83,10 @@ IEndDragHandler
             MergeWith(otherItem);
             return;
         }
+        else
+        {
+            Debug.Log("No item to merge with, trying to place on grid.");
+        }
 
         // DESPUÉS intentar colocar
         if (GridManager.Instance.CanPlace(item, x, y))
@@ -141,6 +145,8 @@ IEndDragHandler
     {
         if (item.data.nextLevelItem == null)
             return;
+
+        Debug.Log("Fusionando " + item.data.itemName + " con " + other.item.data.itemName);
 
         Vector3 pos = other.transform.position;
 

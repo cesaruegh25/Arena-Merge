@@ -17,4 +17,9 @@ MonoBehaviour:
   width: 1
   height: 2
   level: 2
-  nextLevelItem: {fileID: 0}
+  nextLevelItem: {fileID: 11400000, guid: e9337573ffa6f1e4f8a6f7c18a882ebc, type: 2}
+  type: 0
+  cooldown: 1
+  damage: 20
+  heal: 1
+  shield: 1

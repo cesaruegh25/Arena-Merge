@@ -10,16 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f138c008ac5744f4f98bacfa301276aa, type: 3}
-  m_Name: LanzaNv2
+  m_Name: EspadaNv3
   m_EditorClassIdentifier: Assembly-CSharp::ItemData
-  itemName: Lanza
-  sprite: {fileID: 10911, guid: 0000000000000000f000000000000000, type: 0}
-  width: 3
-  height: 1
-  level: 2
+  itemName: Espada nivel2
+  sprite: {fileID: 21300000, guid: c0a2f49e789dd974486b4c6234afebe6, type: 3}
+  width: 1
+  height: 2
+  level: 3
   nextLevelItem: {fileID: 0}
   type: 0
-  cooldown: 1.5
-  damage: 40
+  cooldown: 1
+  damage: 30
   heal: 1
   shield: 1

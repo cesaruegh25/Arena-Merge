@@ -16,3 +16,10 @@ MonoBehaviour:
   sprite: {fileID: 21300000, guid: 2985ccb61f44f9d4faba4264284a4404, type: 3}
   width: 1
   height: 1
+  level: 1
+  nextLevelItem: {fileID: 0}
+  type: 1
+  cooldown: 1.5
+  damage: 1
+  heal: 10
+  shield: 1

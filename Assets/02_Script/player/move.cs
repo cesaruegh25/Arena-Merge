@@ -6,6 +6,8 @@ public class move : MonoBehaviour
     public Vector2 moveInput;
     public Rigidbody2D rb;
 
+    public Vector2 lastDirection;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -19,6 +21,11 @@ public class move : MonoBehaviour
         {
             rb.linearVelocity = new Vector2(moveInput.x * 5, moveInput.y * 5);
             transform.Translate(new Vector3(moveInput.x, 0, moveInput.y) * Time.deltaTime * 5);
+        }
+
+        if (moveInput != Vector2.zero)
+        {
+            lastDirection = moveInput.normalized;
         }
     }
 

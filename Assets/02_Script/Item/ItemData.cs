@@ -1,5 +1,13 @@
 using UnityEngine;
 
+
+public enum ItemType
+{
+    Weapon,
+    Heal,
+    Shield
+}
+
 [CreateAssetMenu]
 public class ItemData : ScriptableObject
 {
@@ -13,4 +21,20 @@ public class ItemData : ScriptableObject
     public int level = 1;
 
     public ItemData nextLevelItem;
+
+    [Header("Gameplay")]
+
+    public ItemType type;
+
+    public float cooldown = 1f;
+
+    public int damage = 1;
+
+    public int heal = 1;
+
+    public int shield = 1;
+
+    public float attackRange = 2f;
+
+    public GameObject weaponPrefab;
 }

@@ -18,3 +18,10 @@ MonoBehaviour:
   height: 2
   level: 1
   nextLevelItem: {fileID: 11400000, guid: a3f362a123077b547ac519b005bda304, type: 2}
+  type: 0
+  cooldown: 1.5
+  damage: 10
+  heal: 1
+  shield: 1
+  attackRange: 2
+  weaponPrefab: {fileID: 2018521010273119933, guid: c832072d112507244994774019a6fe6e, type: 3}

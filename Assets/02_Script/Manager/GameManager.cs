@@ -40,6 +40,7 @@ public class GameManager : MonoBehaviour
     }
     public void GameBegin()
     {
+        LoadoutManager.Instance.SaveInventory();
         isGame = true;
     }
 }

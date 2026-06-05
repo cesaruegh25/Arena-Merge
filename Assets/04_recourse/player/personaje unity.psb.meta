@@ -1,0 +1,1062 @@
+fileFormatVersion: 2
+guid: ffbec2b4054a9d140ab3ee3ebfc3f2b1
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: b2a9591990af98743ba3ff7cf1000886, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 1
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+    swizzle: 50462976
+    isReadable: 0
+    streamingMipmaps: 0
+    streamingMipmapsPriority: 0
+    vTOnly: 0
+    ignoreMipmapLimit: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 100
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    flipbookRows: 0
+    flipbookColumns: 0
+    ignorePngGamma: 0
+    cookieMode: 0
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 0
+    wrapV: 0
+    wrapW: 0
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+    applyGammaDecoding: 0
+  singleSpriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: 0c72a4de0439fb64f90ff0da7747d64c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+    spritePosition: {x: 0, y: 0}
+  multiSpriteImportData: []
+  layeredSpriteImportData:
+  - name: sombra guante der
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 3615
+      y: 1084
+      width: 245
+      height: 272
+    spriteID: 13fd08c64d94d8c42af8cf4b29afa1a4
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 3615, y: 1084}
+    spritePosition: {x: 322, y: 1310}
+  - name: sombra guante izq
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 3868
+      y: 1084
+      width: 212
+      height: 251
+    spriteID: 6228ad1d00fd7654fbcd4bba16ce87d7
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 3868, y: 1084}
+    spritePosition: {x: 1304, y: 1351}
+  - name: sombra mano der
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 1930
+      y: 1528
+      width: 241
+      height: 222
+    spriteID: af08457029998874c9b14f5fc7bfeb0d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1930, y: 1528}
+    spritePosition: {x: 326, y: 1250}
+  - name: sombra antebrazo der
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 1290
+      y: 1510
+      width: 201
+      height: 467
+    spriteID: e0eb64f8e55a8dc4fa89b25bf3c655c0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1290, y: 1510}
+    spritePosition: {x: 374, y: 1424}
+  - name: sombra brazo der
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 2550
+      y: 969
+      width: 226
+      height: 300
+    spriteID: 31267b7347fe7d447b1e2408bd9f79d2
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 2550, y: 969}
+    spritePosition: {x: 413, y: 1788}
+  - name: sombra mannga der
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 3615
+      y: 743
+      width: 324
+      height: 333
+    spriteID: 337eefde3f71dde4d84fca25dd02adc4
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 3615, y: 743}
+    spritePosition: {x: 413, y: 1906}
+  - name: sombra chaqueta
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 743
+      width: 815
+      height: 886
+    spriteID: b732e88f16036394ca684639d588c607
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 743}
+    spritePosition: {x: 480, y: 1511}
+  - name: sombra camisa
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 827
+      y: 743
+      width: 755
+      height: 759
+    spriteID: f1ff6815f945e1d488065f33545a6023
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 827, y: 743}
+    spritePosition: {x: 528, y: 1531}
+  - name: sombra cinturon
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 2851
+      y: 4
+      width: 684
+      height: 582
+    spriteID: 07924a785b898a34fac4b8b72c1e49d9
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 2851, y: 4}
+    spritePosition: {x: 635, y: 1060}
+  - name: sombra pantalon alto der
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 1590
+      y: 743
+      width: 387
+      height: 625
+    spriteID: 9287a9a5518958f42a25ba482ba04062
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1590, y: 743}
+    spritePosition: {x: 599, y: 1076}
+  - name: sombra cadera
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 3947
+      y: 743
+      width: 134
+      height: 242
+    spriteID: cec2248fcd6d5bb41827bfc450f4e8fc
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 3947, y: 743}
+    spritePosition: {x: 935, y: 1317}
+  - name: sombra pantalon alto izq
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 1590
+      y: 1376
+      width: 332
+      height: 637
+    spriteID: 893a0db2b2548e048af8dad29d08fb66
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1590, y: 1376}
+    spritePosition: {x: 935, y: 1068}
+  - name: sombra pantalon bajo der
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 3543
+      y: 4
+      width: 407
+      height: 664
+    spriteID: a74214e7613563e4f81941f41c2259b3
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 3543, y: 4}
+    spritePosition: {x: 520, y: 586}
+  - name: sombra pantalon bajo izq
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 2859
+      y: 743
+      width: 340
+      height: 553
+    spriteID: cdd1cefe13ffb5b46837e20bd9af8c37
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 2859, y: 743}
+    spritePosition: {x: 955, y: 626}
+  - name: sombra zapatos izq
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 827
+      y: 1510
+      width: 455
+      height: 427
+    spriteID: 4776f255376d3ee4e935f8f4c75885f5
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 827, y: 1510}
+    spritePosition: {x: 986, y: 254}
+  - name: sombra zapatos der
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 3207
+      y: 743
+      width: 400
+      height: 462
+    spriteID: 47032ed1de7dbfe4ab2257af044873de
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 3207, y: 743}
+    spritePosition: {x: 571, y: 199}
+  - name: sombra manga izq
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 2309
+      y: 969
+      width: 233
+      height: 336
+    spriteID: 7603d266957617842bc4e02e00b8d5f0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 2309, y: 969}
+    spritePosition: {x: 1141, y: 1918}
+  - name: sombra mano izq
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 2104
+      y: 1758
+      width: 178
+      height: 225
+    spriteID: 265f88caf7fad3d48ad45f04c6c29fad
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 2104, y: 1758}
+    spritePosition: {x: 1330, y: 1306}
+  - name: sombra anterazo izq
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 550
+      y: 1637
+      width: 214
+      height: 387
+    spriteID: c3d9b130200dafb4e8bcf3bf5e54cca6
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 550, y: 1637}
+    spritePosition: {x: 1259, y: 1472}
+  - name: sombra brazo izq
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 1930
+      y: 1758
+      width: 166
+      height: 265
+    spriteID: 6cbfd54c987e8d1439a625eea2edb829
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1930, y: 1758}
+    spritePosition: {x: 1224, y: 1772}
+  - name: sombra felpa
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 1985
+      y: 743
+      width: 866
+      height: 218
+    spriteID: 153b0f863ce530e48ab2961343bfd01d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1985, y: 743}
+    spritePosition: {x: 492, y: 2847}
+  - name: sombra pendientes
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 1930
+      y: 1376
+      width: 660
+      height: 144
+    spriteID: a2082125a413a044881a9f7dbb3da5d1
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1930, y: 1376}
+    spritePosition: {x: 621, y: 2397}
+  - name: sombra pelo delante
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 1036
+      y: 4
+      width: 1040
+      height: 684
+    spriteID: cc3f6e19a991bef4492c1b8238a68e23
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1036, y: 4}
+    spritePosition: {x: 401, y: 2531}
+  - name: sombra boca
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 2290
+      y: 1758
+      width: 174
+      height: 197
+    spriteID: 5989edb3bc0f50046a4cfe8acfa0d1b1
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 2290, y: 1758}
+    spritePosition: {x: 971, y: 2405}
+  - name: sombra ojos
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 1637
+      width: 538
+      height: 293
+    spriteID: 74b36544c2c7cfd499f77a45c442e352
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 1637}
+    spritePosition: {x: 757, y: 2582}
+  - name: sombra cabeza
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 2084
+      y: 4
+      width: 759
+      height: 697
+    spriteID: 719b9d86c7cc1844ea0bcafc0a6120aa
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 2084, y: 4}
+    spritePosition: {x: 569, y: 2328}
+  - name: sombra cuello
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 1985
+      y: 969
+      width: 316
+      height: 309
+    spriteID: bd35edabc04006b4194d32074c4a73bf
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 1985, y: 969}
+    spritePosition: {x: 753, y: 2159}
+  - name: sombra pelo A
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    customData: 
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 1024
+      height: 731
+    spriteID: cbcbacc2af227d04baa80fc1cbf01b10
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 4}
+    spritePosition: {x: 433, y: 2191}
+  spriteImportData: []
+  rigSpriteImportData: []
+  sharedRigSpriteImportData: []
+  mosaicSpriteImportData: []
+  sharedRigCharacterData:
+    bones: []
+    parts: []
+    dimension: {x: 0, y: 0}
+    characterGroups: []
+    pivot: {x: 0, y: 0}
+    boneReadOnly: 0
+  characterData:
+    bones: []
+    parts: []
+    dimension: {x: 0, y: 0}
+    characterGroups: []
+    pivot: {x: 0, y: 0}
+    boneReadOnly: 0
+  platformSettings: []
+  mosaicLayers: 1
+  characterMode: 1
+  documentPivot: {x: 0, y: 0}
+  documentAlignment: 7
+  importHiddenLayers: 0
+  layerMappingOption: 2
+  generatePhysicsShape: 0
+  paperDollMode: 0
+  keepDupilcateSpriteName: 1
+  generateTileAssets: 0
+  tilePaletteCellLayout: 0
+  tilePaletteHexagonLayout: 0
+  tilePaletteCellSize: {x: 1, y: 1, z: 0}
+  tilePaletteCellSizing: 0
+  transparencySortMode: 0
+  transparencySortAxis: {x: 0, y: 0, z: 1}
+  tileTemplate: {instanceID: 0}
+  padding: 4
+  spriteSizeExpand: 0
+  skeletonAssetReferenceID: 
+  pipeline: {instanceID: 0}
+  pipelineVersion: 
+  spriteCategoryList:
+    categories: []
+  spritePackingTag: 
+  resliceFromLayer: 0
+  pSDLayerImportSetting: []
+  psdLayers:
+  - name: Personaje
+    spriteName: 
+    isGroup: 1
+    parentIndex: -1
+    spriteID: 6e94f9fd70fffcf49b874b4370bfbb4c
+    layerID: 407
+    mosaicPosition: {x: 0, y: 0}
+    flatten: 0
+    isImported: 0
+    isVisible: 1
+  - name: sombra guante der
+    spriteName: sombra guante der
+    isGroup: 0
+    parentIndex: 0
+    spriteID: 13fd08c64d94d8c42af8cf4b29afa1a4
+    layerID: 406
+    mosaicPosition: {x: 3615, y: 1084}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: sombra guante izq
+    spriteName: sombra guante izq
+    isGroup: 0
+    parentIndex: 0
+    spriteID: 6228ad1d00fd7654fbcd4bba16ce87d7
+    layerID: 404
+    mosaicPosition: {x: 3868, y: 1084}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: sombra mano der
+    spriteName: sombra mano der
+    isGroup: 0
+    parentIndex: 0
+    spriteID: af08457029998874c9b14f5fc7bfeb0d
+    layerID: 552
+    mosaicPosition: {x: 1930, y: 1528}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: sombra antebrazo der
+    spriteName: sombra antebrazo der
+    isGroup: 0
+    parentIndex: 0
+    spriteID: e0eb64f8e55a8dc4fa89b25bf3c655c0
+    layerID: 541
+    mosaicPosition: {x: 1290, y: 1510}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: sombra brazo der
+    spriteName: sombra brazo der
+    isGroup: 0
+    parentIndex: 0
+    spriteID: 31267b7347fe7d447b1e2408bd9f79d2
+    layerID: 543
+    mosaicPosition: {x: 2550, y: 969}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: sombra mannga der
+    spriteName: sombra mannga der
+    isGroup: 0
+    parentIndex: 0
+    spriteID: 337eefde3f71dde4d84fca25dd02adc4
+    layerID: 398
+    mosaicPosition: {x: 3615, y: 743}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: sombra chaqueta
+    spriteName: sombra chaqueta
+    isGroup: 0
+    parentIndex: 0
+    spriteID: b732e88f16036394ca684639d588c607
+    layerID: 544
+    mosaicPosition: {x: 4, y: 743}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: sombra camisa
+    spriteName: sombra camisa
+    isGroup: 0
+    parentIndex: 0
+    spriteID: f1ff6815f945e1d488065f33545a6023
+    layerID: 545
+    mosaicPosition: {x: 827, y: 743}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: sombra cinturon
+    spriteName: sombra cinturon
+    isGroup: 0
+    parentIndex: 0
+    spriteID: 07924a785b898a34fac4b8b72c1e49d9
+    layerID: 546
+    mosaicPosition: {x: 2851, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: sombra pantalon alto der
+    spriteName: sombra pantalon alto der
+    isGroup: 0
+    parentIndex: 0
+    spriteID: 9287a9a5518958f42a25ba482ba04062
+    layerID: 547
+    mosaicPosition: {x: 1590, y: 743}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: sombra cadera
+    spriteName: sombra cadera
+    isGroup: 0
+    parentIndex: 0
+    spriteID: cec2248fcd6d5bb41827bfc450f4e8fc
+    layerID: 548
+    mosaicPosition: {x: 3947, y: 743}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: sombra pantalon alto izq
+    spriteName: sombra pantalon alto izq
+    isGroup: 0
+    parentIndex: 0
+    spriteID: 893a0db2b2548e048af8dad29d08fb66
+    layerID: 549
+    mosaicPosition: {x: 1590, y: 1376}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: sombra pantalon bajo der
+    spriteName: sombra pantalon bajo der
+    isGroup: 0
+    parentIndex: 0
+    spriteID: a74214e7613563e4f81941f41c2259b3
+    layerID: 382
+    mosaicPosition: {x: 3543, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: sombra pantalon bajo izq
+    spriteName: sombra pantalon bajo izq
+    isGroup: 0
+    parentIndex: 0
+    spriteID: cdd1cefe13ffb5b46837e20bd9af8c37
+    layerID: 380
+    mosaicPosition: {x: 2859, y: 743}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: sombra zapatos izq
+    spriteName: sombra zapatos izq
+    isGroup: 0
+    parentIndex: 0
+    spriteID: 4776f255376d3ee4e935f8f4c75885f5
+    layerID: 550
+    mosaicPosition: {x: 827, y: 1510}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: sombra zapatos der
+    spriteName: sombra zapatos der
+    isGroup: 0
+    parentIndex: 0
+    spriteID: 47032ed1de7dbfe4ab2257af044873de
+    layerID: 551
+    mosaicPosition: {x: 3207, y: 743}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: sombra manga izq
+    spriteName: sombra manga izq
+    isGroup: 0
+    parentIndex: 0
+    spriteID: 7603d266957617842bc4e02e00b8d5f0
+    layerID: 556
+    mosaicPosition: {x: 2309, y: 969}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: sombra mano izq
+    spriteName: sombra mano izq
+    isGroup: 0
+    parentIndex: 0
+    spriteID: 265f88caf7fad3d48ad45f04c6c29fad
+    layerID: 555
+    mosaicPosition: {x: 2104, y: 1758}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: sombra anterazo izq
+    spriteName: sombra anterazo izq
+    isGroup: 0
+    parentIndex: 0
+    spriteID: c3d9b130200dafb4e8bcf3bf5e54cca6
+    layerID: 542
+    mosaicPosition: {x: 550, y: 1637}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: sombra brazo izq
+    spriteName: sombra brazo izq
+    isGroup: 0
+    parentIndex: 0
+    spriteID: 6cbfd54c987e8d1439a625eea2edb829
+    layerID: 553
+    mosaicPosition: {x: 1930, y: 1758}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: sombra felpa
+    spriteName: sombra felpa
+    isGroup: 0
+    parentIndex: 0
+    spriteID: 153b0f863ce530e48ab2961343bfd01d
+    layerID: 366
+    mosaicPosition: {x: 1985, y: 743}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: sombra pendientes
+    spriteName: sombra pendientes
+    isGroup: 0
+    parentIndex: 0
+    spriteID: a2082125a413a044881a9f7dbb3da5d1
+    layerID: 364
+    mosaicPosition: {x: 1930, y: 1376}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: sombra pelo delante
+    spriteName: sombra pelo delante
+    isGroup: 0
+    parentIndex: 0
+    spriteID: cc3f6e19a991bef4492c1b8238a68e23
+    layerID: 362
+    mosaicPosition: {x: 1036, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: sombra boca
+    spriteName: sombra boca
+    isGroup: 0
+    parentIndex: 0
+    spriteID: 5989edb3bc0f50046a4cfe8acfa0d1b1
+    layerID: 360
+    mosaicPosition: {x: 2290, y: 1758}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: sombra ojos
+    spriteName: sombra ojos
+    isGroup: 0
+    parentIndex: 0
+    spriteID: 74b36544c2c7cfd499f77a45c442e352
+    layerID: 358
+    mosaicPosition: {x: 4, y: 1637}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: sombra cabeza
+    spriteName: sombra cabeza
+    isGroup: 0
+    parentIndex: 0
+    spriteID: 719b9d86c7cc1844ea0bcafc0a6120aa
+    layerID: 356
+    mosaicPosition: {x: 2084, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: sombra cuello
+    spriteName: sombra cuello
+    isGroup: 0
+    parentIndex: 0
+    spriteID: bd35edabc04006b4194d32074c4a73bf
+    layerID: 354
+    mosaicPosition: {x: 1985, y: 969}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  - name: sombra pelo A
+    spriteName: sombra pelo A
+    isGroup: 0
+    parentIndex: 0
+    spriteID: cbcbacc2af227d04baa80fc1cbf01b10
+    layerID: 352
+    mosaicPosition: {x: 4, y: 4}
+    flatten: 0
+    isImported: 1
+    isVisible: 1
+  mosaicPSDLayers: []
+  rigPSDLayers: []
+  sharedRigPSDLayers: []
+  importFileNodeState: 1
+  platformSettingsDirtyTick: 0
+  spriteSizeExpandChanged: 0
+  generateGOHierarchy: 0
+  textureAssetName: 
+  prefabAssetName: 
+  spriteLibAssetName: 
+  skeletonAssetName: 
+  secondarySpriteTextures: []

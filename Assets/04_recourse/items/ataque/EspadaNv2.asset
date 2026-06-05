@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f138c008ac5744f4f98bacfa301276aa, type: 3}
   m_Name: EspadaNv2
   m_EditorClassIdentifier: Assembly-CSharp::ItemData
-  itemName: Espada nivel2
+  itemName: Espada
   sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
   width: 1
   height: 2
@@ -23,3 +23,5 @@ MonoBehaviour:
   damage: 20
   heal: 1
   shield: 1
+  attackRange: 2
+  weaponPrefab: {fileID: 2018521010273119933, guid: c832072d112507244994774019a6fe6e, type: 3}

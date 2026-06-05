@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 
@@ -16,6 +17,10 @@ public class WeaponBehaviour : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player")
         .transform;
         movement = player.GetComponent<move>();
+        if (data.itemName == "Pan")
+        {
+            MaxHealEffect();
+        }
     }
 
     void Update()
@@ -35,27 +40,26 @@ public class WeaponBehaviour : MonoBehaviour
         switch (data.itemName)
         {
             case "Espada":
-                StartCoroutine(SwordAttack());
+                SwordAttack();
                 break;
 
             case "Lanza":
-                StartCoroutine(SpearAttack());
+                SpearAttack();
                 break;
 
             case "Escudo":
-                StartCoroutine(ShieldEffect());
+                ShieldEffect();
                 break;
 
             case "Manzana":
-                StartCoroutine(HealEffect());
+                HealEffect();
                 break;
         }
     }
 
-    IEnumerator SwordAttack()
-    {
-        //gameObject.SetActive(true);
 
+    public void SwordAttack()
+    {
         Vector3 dir =
             movement.lastDirection;
 
@@ -88,16 +92,12 @@ public class WeaponBehaviour : MonoBehaviour
                     Mathf.Lerp(-90, 90, t / duration)
                 );
 
-            yield return null;
         }
 
-        //gameObject.SetActive(false);
     }
 
-    IEnumerator SpearAttack()
+    public void SpearAttack()
     {
-        //gameObject.SetActive(true);
-
         Vector3 dir =
             movement.lastDirection;
 
@@ -133,34 +133,49 @@ public class WeaponBehaviour : MonoBehaviour
                     t / 0.15f
                 );
 
-            yield return null;
         }
 
-        //gameObject.SetActive(false);
     }
 
-    IEnumerator ShieldEffect()
+    public void ShieldEffect()
     {
-        gameObject.SetActive(true);
+        Debug.Log("entra a la funcion");
+        //gameObject.GetComponents<SpriteRenderer>()[0].enabled = true;
+        if (GameManager.Instance.shield < 100)
+        {
+            GameManager.Instance.shield += data.shield;
+            Debug.Log("escudo: " + GameManager.Instance.shield);
+            GameManager.Instance.ActualizarUI();
+        }
+        else
+        {
+            Debug.Log("escudo al 100");
+        }
 
-        transform.position =
-            player.position;
-
-        yield return new WaitForSeconds(0.5f);
-
-        gameObject.SetActive(false);
+        //gameObject.GetComponents<SpriteRenderer>()[0].enabled = false;
     }
 
-    IEnumerator HealEffect()
+    public void HealEffect()
     {
-        gameObject.SetActive(true);
+        //gameObject.GetComponents<SpriteRenderer>()[0].enabled = true;
+        if (GameManager.Instance.MaxHealth > GameManager.Instance.health) 
+        {
+            GameManager.Instance.health += data.heal;
+            Debug.Log("vida: " + GameManager.Instance.health);
+            GameManager.Instance.ActualizarUI();
+        }
+        else
+        {
+            GameManager.Instance.ActualizarUI();
+            Debug.Log("Vida al maximo");
+        }
 
-        transform.position =
-            player.position;
-
-        yield return new WaitForSeconds(0.5f);
-
-        gameObject.SetActive(false);
+        //gameObject.GetComponents<SpriteRenderer>()[0].enabled = false;
+    }
+    private void MaxHealEffect()
+    {
+        GameManager.Instance.MaxHealth += data.heal;
+        GameManager.Instance.ActualizarMaxHealth();
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {

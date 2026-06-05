@@ -36,10 +36,9 @@ public class moveEnemy : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            // Aquí puedes agregar el código para reducir la vida del jugador o cualquier otra acción que desees realizar al colisionar con el enemigo.
-            Debug.Log("¡El enemigo ha colisionado con el jugador!");
-            collision.gameObject.GetComponent<SpriteRenderer>().color = Color.red;
-            GameManager.Instance.health -= damage; // Reduce la vida del jugador en 10 (puedes ajustar este valor según tus necesidades)
+            GameManager.Instance.health -= damage;
+            Debug.Log("¡El enemigo ha colisionado con el jugador!" + GameManager.Instance.health);
+            GameManager.Instance.ActualizarUI(); 
         }
     }
 }

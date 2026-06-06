@@ -14,12 +14,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ItemData
   itemName: Lanza
   sprite: {fileID: 21300000, guid: 008c69a96c8b7de4083ad8057e1d9e6b, type: 3}
-  width: 3
-  height: 1
+  width: 4
+  height: 2
   level: 1
   nextLevelItem: {fileID: 11400000, guid: 0e1dd1b9fa4136f4683f5f1009c7c336, type: 2}
   type: 0
   cooldown: 2
-  damage: 30
+  damage: 100
   heal: 1
   shield: 1
+  attackRange: 3
+  alejar: 25

@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -10,12 +11,13 @@ public class GameManager : MonoBehaviour
     public Slider UIVida;
     public Slider UIShield;
     public GameObject UITienda;
+    public TextMeshProUGUI UITiempo;
 
     public int score;
     public int MaxHealth = 100;
     public int health;
     public int shield;
-
+    public float time = 120f;
     public bool isGame;
 
     void Awake()
@@ -48,6 +50,15 @@ public class GameManager : MonoBehaviour
         {
             Time.timeScale = 0; // Detiene el juego
         }
+        if (isGame)
+        {
+            time -= Time.deltaTime;
+            UITiempo.text = time.ToString("F1");
+            if (time <= 0)
+            {
+                Time.timeScale = 0; // Detiene el juego
+            }
+        }
     }
     public void GameBegin()
     {
@@ -67,5 +78,15 @@ public class GameManager : MonoBehaviour
     {
         UIVida.maxValue = MaxHealth;
         UIVida.value = MaxHealth;
+    }
+    public void PlayerIsDamage(int damage)
+    {
+        if (shield > 0)
+        {
+            int shieldDamage = Mathf.Min(shield, damage);
+            shield -= shieldDamage;
+            damage -= shieldDamage;
+        }
+        health -= damage;
     }
 }

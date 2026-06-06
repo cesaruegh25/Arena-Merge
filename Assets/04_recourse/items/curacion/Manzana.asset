@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ItemData
   itemName: Manzana
   sprite: {fileID: 21300000, guid: 0fb9129d314c5b3449291755da099a85, type: 3}
-  width: 1
-  height: 1
+  width: 2
+  height: 2
   level: 1
   nextLevelItem: {fileID: 0}
   type: 1
@@ -24,3 +24,4 @@ MonoBehaviour:
   heal: 20
   shield: 0
   attackRange: 0
+  alejar: 10

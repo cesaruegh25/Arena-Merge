@@ -3,9 +3,9 @@ using UnityEngine.InputSystem;
 
 public class move : MonoBehaviour
 {
+    public float scale = 0.1f;
     public Vector2 moveInput;
     public Rigidbody2D rb;
-
     public Vector2 lastDirection;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -26,6 +26,16 @@ public class move : MonoBehaviour
         if (moveInput != Vector2.zero)
         {
             lastDirection = moveInput.normalized;
+        }
+        if (moveInput.x < 0)
+        {
+            transform.localScale =
+                new Vector3(-scale, scale, scale);
+        }
+        else if (moveInput.x > 0)
+        {
+            transform.localScale =
+                new Vector3(scale, scale, scale);
         }
     }
 

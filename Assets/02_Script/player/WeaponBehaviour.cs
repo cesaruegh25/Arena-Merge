@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using UnityEngine;
+using static UnityEditor.Progress;
 
 public class WeaponBehaviour : MonoBehaviour
 {
@@ -11,6 +12,15 @@ public class WeaponBehaviour : MonoBehaviour
     float timer;
 
     move movement;
+    // espada
+    private Vector3 swordDirection;
+    private Vector3 dir;
+    private bool isAttacking = false;
+    // Lanza
+    private float rotationSpeed = 180f;
+    private bool clockwise = false;
+    private float angle;
+    public float startAngle;
 
     void Start()
     {
@@ -21,10 +31,46 @@ public class WeaponBehaviour : MonoBehaviour
         {
             MaxHealEffect();
         }
+        if (data.itemName == "Lanza")
+        {
+            angle =
+                startAngle * Mathf.Deg2Rad;
+        }
+        if (data.itemName == "Espada")
+        {
+            float rad =
+                startAngle * Mathf.Deg2Rad;
+
+            swordDirection =
+                new Vector3(
+                    Mathf.Cos(rad),
+                    Mathf.Sin(rad),
+                    0
+                ).normalized;
+        }
     }
 
     void Update()
     {
+        if (data.itemName == "Espada" && !isAttacking)
+        {
+            dir = movement.lastDirection;
+            transform.position = player.position + swordDirection * 1f;
+
+            float angle = Mathf.Atan2(
+                        swordDirection.y,
+                        swordDirection.x
+                        ) * Mathf.Rad2Deg;
+
+            transform.rotation =
+                Quaternion.Euler(0, 0, angle - 90f);
+        }
+        if (data.itemName == "Lanza")
+        {
+            dir = movement.lastDirection;
+            SpearAttack();
+        }
+
         timer += Time.deltaTime;
 
         if (timer >= data.cooldown)
@@ -40,11 +86,7 @@ public class WeaponBehaviour : MonoBehaviour
         switch (data.itemName)
         {
             case "Espada":
-                SwordAttack();
-                break;
-
-            case "Lanza":
-                SpearAttack();
+                StartCoroutine(SwordAttack());
                 break;
 
             case "Escudo":
@@ -58,93 +100,76 @@ public class WeaponBehaviour : MonoBehaviour
     }
 
 
-    public void SwordAttack()
+    IEnumerator SwordAttack()
     {
-        Vector3 dir =
-            movement.lastDirection;
+        isAttacking = true;
+        gameObject.GetComponent<Collider2D>().enabled = true;
 
-        if (dir == Vector3.zero)
-            dir = Vector3.right;
+        Vector3 startPos = player.position + swordDirection * 1f;
 
-        // colocar delante
-        transform.position =
-            player.position +
-            dir * 1f;
-
-        // rotación según dirección
-        float angle =
-            Mathf.Atan2(dir.y, dir.x) *
-            Mathf.Rad2Deg;
+        Vector3 endPos = player.position + swordDirection * data.attackRange;
 
         float duration = 0.15f;
-
         float t = 0;
 
+        // avanzar
         while (t < duration)
-        {
-            t += Time.deltaTime;
-
-            transform.rotation =
-                Quaternion.Euler(
-                    0,
-                    0,
-                    angle +
-                    Mathf.Lerp(-90, 90, t / duration)
-                );
-
-        }
-
-    }
-
-    public void SpearAttack()
-    {
-        Vector3 dir =
-            movement.lastDirection;
-
-        if (dir == Vector3.zero)
-            dir = Vector3.right;
-
-        Vector3 start =
-            player.position +
-            dir * 0.5f;
-
-        Vector3 end =
-            player.position +
-            dir * data.attackRange;
-
-        transform.rotation =
-            Quaternion.Euler(
-                0,
-                0,
-                Mathf.Atan2(dir.y, dir.x) *
-                Mathf.Rad2Deg
-            );
-
-        float t = 0;
-
-        while (t < 0.15f)
         {
             t += Time.deltaTime;
 
             transform.position =
                 Vector3.Lerp(
-                    start,
-                    end,
-                    t / 0.15f
+                    startPos,
+                    endPos,
+                    t / duration
                 );
-
+            yield return null;
         }
+        gameObject.GetComponent<Collider2D>().enabled = false;
+        isAttacking = false;
+    }
 
+    public void SpearAttack()
+    {
+        // girar
+        float dir =
+            clockwise ? -1f : 1f;
+
+        angle +=
+            rotationSpeed *
+            Mathf.Deg2Rad *
+            Time.deltaTime *
+            dir;
+
+        // posición alrededor del jugador
+        Vector2 orbitPos =
+            new Vector2(
+                Mathf.Cos(angle),
+                Mathf.Sin(angle)
+            ) * data.attackRange;
+
+        transform.position =
+            (Vector2)player.position +
+            orbitPos;
+
+        // rotación visual del arma
+        float rot =
+            angle * Mathf.Rad2Deg;
+
+        transform.rotation =
+            Quaternion.Euler(
+                0,
+                0,
+                rot - 90f
+            );
     }
 
     public void ShieldEffect()
     {
-        Debug.Log("entra a la funcion");
         //gameObject.GetComponents<SpriteRenderer>()[0].enabled = true;
         if (GameManager.Instance.shield < 100)
         {
             GameManager.Instance.shield += data.shield;
-            Debug.Log("escudo: " + GameManager.Instance.shield);
             GameManager.Instance.ActualizarUI();
         }
         else
@@ -161,7 +186,6 @@ public class WeaponBehaviour : MonoBehaviour
         if (GameManager.Instance.MaxHealth > GameManager.Instance.health) 
         {
             GameManager.Instance.health += data.heal;
-            Debug.Log("vida: " + GameManager.Instance.health);
             GameManager.Instance.ActualizarUI();
         }
         else
@@ -189,6 +213,31 @@ public class WeaponBehaviour : MonoBehaviour
             moveEnemy enemy =
                 collision.GetComponent<moveEnemy>();
 
+            Rigidbody2D rb =
+                collision.gameObject.GetComponent<Rigidbody2D>();
+
+            if (rb != null)
+            {
+                Vector2 direction =
+                    (collision.transform.position -
+                     transform.position).normalized;
+
+                rb.linearVelocity = Vector2.zero;
+                if (enemy.data.enemyType == EnemyType.Elite)
+                {
+                    rb.AddForce(
+                        direction * (data.alejar/2f),
+                        ForceMode2D.Impulse
+                    );
+                }
+                if (enemy.data.enemyType == EnemyType.Basic)
+                {
+                    rb.AddForce(
+                        direction * data.alejar,
+                        ForceMode2D.Impulse
+                    );
+                }
+            }
             if (enemy != null)
             {
                 enemy.TakeDamage(10);

@@ -35,4 +35,6 @@ public class ItemData : ScriptableObject
     public int shield = 1;
 
     public float attackRange = 2f;
+
+    public int alejar = 10;
 }

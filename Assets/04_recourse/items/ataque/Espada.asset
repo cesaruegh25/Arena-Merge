@@ -14,14 +14,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ItemData
   itemName: Espada
   sprite: {fileID: 21300000, guid: c0a2f49e789dd974486b4c6234afebe6, type: 3}
-  width: 1
-  height: 2
+  width: 2
+  height: 4
   level: 1
   nextLevelItem: {fileID: 11400000, guid: a3f362a123077b547ac519b005bda304, type: 2}
   type: 0
-  cooldown: 1.5
-  damage: 10
+  cooldown: 5
+  damage: 50
   heal: 1
   shield: 1
-  attackRange: 2
-  weaponPrefab: {fileID: 2018521010273119933, guid: c832072d112507244994774019a6fe6e, type: 3}
+  attackRange: 4
+  alejar: 25

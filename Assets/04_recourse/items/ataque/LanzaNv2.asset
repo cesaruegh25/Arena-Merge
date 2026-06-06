@@ -13,13 +13,15 @@ MonoBehaviour:
   m_Name: LanzaNv2
   m_EditorClassIdentifier: Assembly-CSharp::ItemData
   itemName: Lanza
-  sprite: {fileID: 10911, guid: 0000000000000000f000000000000000, type: 0}
-  width: 3
-  height: 1
+  sprite: {fileID: 21300000, guid: 008c69a96c8b7de4083ad8057e1d9e6b, type: 3}
+  width: 4
+  height: 2
   level: 2
-  nextLevelItem: {fileID: 0}
+  nextLevelItem: {fileID: 11400000, guid: 2373759908a68b7408b9514c3b8d2453, type: 2}
   type: 0
   cooldown: 1.5
-  damage: 40
+  damage: 200
   heal: 1
   shield: 1
+  attackRange: 3
+  alejar: 50

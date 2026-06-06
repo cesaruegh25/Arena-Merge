@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ItemData
   itemName: Pan
   sprite: {fileID: 21300000, guid: 2985ccb61f44f9d4faba4264284a4404, type: 3}
-  width: 3
+  width: 2
   height: 1
   level: 1
   nextLevelItem: {fileID: 0}
@@ -24,3 +24,4 @@ MonoBehaviour:
   heal: 5
   shield: 0
   attackRange: 0
+  alejar: 10

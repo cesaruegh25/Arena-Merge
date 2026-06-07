@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: LanzaNv3
   m_EditorClassIdentifier: Assembly-CSharp::ItemData
   itemName: Lanza
-  sprite: {fileID: 21300000, guid: 008c69a96c8b7de4083ad8057e1d9e6b, type: 3}
+  sprite: {fileID: 21300000, guid: e27fae59d60d6844ab905d35c9694dc6, type: 3}
   width: 4
   height: 2
   level: 3

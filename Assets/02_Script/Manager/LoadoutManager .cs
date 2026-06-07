@@ -147,7 +147,8 @@ public class LoadoutManager : MonoBehaviour
             }
             if (item.itemName == "Lanza")
             {
-                bc.offset = new Vector2(-4f, 0f);
+                bc.offset = new Vector2(-6.1f, 0f);
+                bc.size = new Vector2(3.8f, 1.25f);
             }
 
             WeaponBehaviour wb =

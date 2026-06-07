@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: EscudoNv2
   m_EditorClassIdentifier: Assembly-CSharp::ItemData
   itemName: Escudo
-  sprite: {fileID: 21300000, guid: 81830254c6cc8d94cbe0ca254bb1e4ac, type: 3}
+  sprite: {fileID: 21300000, guid: debf1f6ad9c8a0040a65ef3dfd795950, type: 3}
   width: 3
   height: 3
   level: 2

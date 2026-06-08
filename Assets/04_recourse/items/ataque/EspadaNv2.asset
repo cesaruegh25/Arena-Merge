@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: EspadaNv2
   m_EditorClassIdentifier: Assembly-CSharp::ItemData
   itemName: Espada
-  sprite: {fileID: 21300000, guid: c621a95ed464b9041bfbe50868d61740, type: 3}
+  spriteStore: {fileID: 21300000, guid: 9dda414494e40074f9634b0977b1dc0e, type: 3}
+  spriteBattle: {fileID: 21300000, guid: c621a95ed464b9041bfbe50868d61740, type: 3}
   width: 2
   height: 4
   level: 2

@@ -15,7 +15,7 @@ public class ItemUI : MonoBehaviour
         GetComponent<Image>();
 
         img.sprite =
-        data.sprite;
+        data.spriteStore;
 
         RectTransform rt =
         GetComponent<RectTransform>();

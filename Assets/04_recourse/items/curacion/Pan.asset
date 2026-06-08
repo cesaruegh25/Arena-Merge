@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Pan
   m_EditorClassIdentifier: Assembly-CSharp::ItemData
   itemName: Pan
-  sprite: {fileID: 21300000, guid: a1c6355e13b5f1640b03edfb0ff8a2a6, type: 3}
+  spriteStore: {fileID: 21300000, guid: 9006d218779ce4d4c8cbce5380809611, type: 3}
+  spriteBattle: {fileID: 21300000, guid: a1c6355e13b5f1640b03edfb0ff8a2a6, type: 3}
   width: 2
   height: 1
   level: 1

@@ -54,7 +54,7 @@ public class moveEnemy : MonoBehaviour
         {
 
             GameManager.Instance.PlayerIsDamage(data.damage);
-            Debug.Log("¡El enemigo ha colisionado con el jugador!" + GameManager.Instance.health);
+            //Debug.Log("¡El enemigo ha colisionado con el jugador!" + GameManager.Instance.health + "moveEnemy 57");
             GameManager.Instance.ActualizarUI();
             // EMPUJE HACIA ATRÁS
             Rigidbody2D rb =

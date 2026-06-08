@@ -65,7 +65,7 @@ public class LoadoutManager : MonoBehaviour
                     obj.GetComponent<Image>();
                 if (img != null)
                 {
-                    img.sprite = item.sprite;
+                    img.sprite = item.spriteBattle;
                 }
                 WeaponBehaviour wb =
                     obj.GetComponent<WeaponBehaviour>();
@@ -137,13 +137,14 @@ public class LoadoutManager : MonoBehaviour
 
             if (sr != null)
             {
-                sr.sprite = item.sprite;
+                sr.sprite = item.spriteBattle;
             }
             BoxCollider2D bc =
                 obj.GetComponent<BoxCollider2D>();
             if (item.itemName == "Espada")
             {
-                bc.offset = new Vector2(0f, 1.5f);
+                bc.offset = new Vector2(0f, 2.4f);
+                bc.size = new Vector2(1.7f, 8f);
             }
             if (item.itemName == "Lanza")
             {

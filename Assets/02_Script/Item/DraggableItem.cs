@@ -173,7 +173,7 @@ IEndDragHandler
             newObj.GetComponent<UnityEngine.UI.Image>();
 
         img.sprite =
-            item.data.nextLevelItem.sprite;
+            item.data.nextLevelItem.spriteStore;
 
         RectTransform rt =
             newObj.GetComponent<RectTransform>();

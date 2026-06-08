@@ -58,7 +58,7 @@ public class WeaponController : MonoBehaviour
 
         Image img = slash.AddComponent<Image>();
 
-        img.sprite = data.sprite;
+        img.sprite = data.spriteBattle;
 
         RectTransform rt =
             slash.GetComponent<RectTransform>();
@@ -96,7 +96,7 @@ public class WeaponController : MonoBehaviour
 
         Image img = spear.AddComponent<Image>();
 
-        img.sprite = data.sprite;
+        img.sprite = data.spriteBattle;
 
         RectTransform rt =
             spear.GetComponent<RectTransform>();
@@ -140,7 +140,7 @@ public class WeaponController : MonoBehaviour
 
         Image img = shield.AddComponent<Image>();
 
-        img.sprite = data.sprite;
+        img.sprite = data.spriteBattle;
 
         RectTransform rt =
             shield.GetComponent<RectTransform>();
@@ -163,7 +163,7 @@ public class WeaponController : MonoBehaviour
 
         Image img = heal.AddComponent<Image>();
 
-        img.sprite = data.sprite;
+        img.sprite = data.spriteBattle;
 
         RectTransform rt =
             heal.GetComponent<RectTransform>();

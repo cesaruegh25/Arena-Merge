@@ -160,7 +160,7 @@ public class WeaponBehaviour : MonoBehaviour
             Quaternion.Euler(
                 0,
                 0,
-                rot - 90f
+                rot -180f
             );
     }
 
@@ -174,7 +174,7 @@ public class WeaponBehaviour : MonoBehaviour
         }
         else
         {
-            Debug.Log("escudo al 100");
+            Debug.Log("escudo al 100" + "WeaponBehaviour 177");
         }
 
         //gameObject.GetComponents<SpriteRenderer>()[0].enabled = false;
@@ -191,7 +191,7 @@ public class WeaponBehaviour : MonoBehaviour
         else
         {
             GameManager.Instance.ActualizarUI();
-            Debug.Log("Vida al maximo");
+            Debug.Log("Vida al maximo" + "WeaponBehaviour 194");
         }
 
         //gameObject.GetComponents<SpriteRenderer>()[0].enabled = false;
@@ -203,10 +203,6 @@ public class WeaponBehaviour : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        // ignorar player
-        if (collision.CompareTag("Player"))
-            return;
-
         // dañar enemigo
         if (collision.CompareTag("Enemy"))
         {
@@ -240,6 +236,7 @@ public class WeaponBehaviour : MonoBehaviour
             }
             if (enemy != null)
             {
+                //Debug.Log("Enemigo golpeado" + collision.name + "WeaponBehaviour 239");
                 enemy.TakeDamage(10);
             }
         }

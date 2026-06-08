@@ -31,6 +31,10 @@ public class WeaponBehaviour : MonoBehaviour
         {
             MaxHealEffect();
         }
+        if (data.itemName == "Bebida")
+        {
+            DrinkEffect();
+        }   
         if (data.itemName == "Lanza")
         {
             angle =
@@ -201,6 +205,10 @@ public class WeaponBehaviour : MonoBehaviour
         GameManager.Instance.MaxHealth += data.heal;
         GameManager.Instance.ActualizarMaxHealth();
     }
+    private void DrinkEffect()
+    {
+        GameManager.Instance.speed += data.heal;
+    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         // dañar enemigo
@@ -237,8 +245,18 @@ public class WeaponBehaviour : MonoBehaviour
             if (enemy != null)
             {
                 //Debug.Log("Enemigo golpeado" + collision.name + "WeaponBehaviour 239");
+                SpriteRenderer sr = collision.GetComponent<SpriteRenderer>();
+                if (sr != null)
+                    StartCoroutine(FlashSprite(sr));
                 enemy.TakeDamage(10);
             }
         }
+    }
+
+    private IEnumerator FlashSprite(SpriteRenderer sr)
+    {
+        sr.color = Color.red;
+        yield return new WaitForSeconds(0.5f);
+        sr.color = Color.white;
     }
 }

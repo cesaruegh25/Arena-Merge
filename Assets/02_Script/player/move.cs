@@ -19,8 +19,9 @@ public class move : MonoBehaviour
     {
         if (moveInput != Vector2.zero && GameManager.Instance.isGame)
         {
-            rb.linearVelocity = new Vector2(moveInput.x * 5, moveInput.y * 5);
-            transform.Translate(new Vector3(moveInput.x, 0, moveInput.y) * Time.deltaTime * 5);
+            float speed = GameManager.Instance.speed;
+            rb.linearVelocity = new Vector2(moveInput.x * speed, moveInput.y * speed);
+            transform.Translate(new Vector3(moveInput.x, 0, moveInput.y) * Time.deltaTime * speed);
         }
 
         if (moveInput != Vector2.zero)

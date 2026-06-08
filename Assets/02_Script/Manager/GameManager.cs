@@ -17,6 +17,7 @@ public class GameManager : MonoBehaviour
     public int MaxHealth = 100;
     public int health;
     public int shield;
+    public float speed = 5f;
     public float time = 120f;
     public bool isGame;
 

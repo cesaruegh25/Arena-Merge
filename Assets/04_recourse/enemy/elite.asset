@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: elite
   m_EditorClassIdentifier: Assembly-CSharp::EnemyData
   enemyType: 1
-  sprite: {fileID: 21300000, guid: 22f297a2c7a56994885af478a9b1cc25, type: 3}
+  sprite: {fileID: 21300000, guid: 777538d8c9b311747b84cc94124f1238, type: 3}
   vida: 500
   velocidad: 0.025
   damage: 50

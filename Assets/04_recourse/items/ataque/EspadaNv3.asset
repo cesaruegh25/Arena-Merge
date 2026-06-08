@@ -21,7 +21,7 @@ MonoBehaviour:
   nextLevelItem: {fileID: 0}
   type: 0
   cooldown: 3
-  damage: 150
+  damage: 500
   heal: 1
   shield: 1
   attackRange: 4

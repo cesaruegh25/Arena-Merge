@@ -69,15 +69,18 @@ public class EnemySpawner : MonoBehaviour
                 obj.GetComponent<BoxCollider2D>();
         if (enemy.enemyData.enemyType == EnemyType.Basic)
         {
-            bc.size = new Vector2(2.5f, 4f);
+            bc.offset = new Vector2(0f, 0.75f);
+            bc.size = new Vector2(1f, 3.5f);
         }
         if (enemy.enemyData.enemyType == EnemyType.Elite)
         {
-            bc.size = new Vector2(3.5f, 4f);
+            bc.offset = new Vector2(0.4f, 0.75f);
+            bc.size = new Vector2(1f, 3.5f);
         }
         if (enemy.enemyData.enemyType == EnemyType.Boss)
         {
-            bc.size = new Vector2(6.5f, 6.5f);
+            bc.offset = new Vector2(0.5f, 0.4f);
+            bc.size = new Vector2(2f, 4f);
         }
 
     }

@@ -302,6 +302,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::moveEnemy
   UIVida: {fileID: 7036728033504434083}
+  healthBar: {fileID: 5611787606440281168}
+  spriteRenderers:
+  - {fileID: 0}
   data: {fileID: 0}
 --- !u!61 &7129871087628086365
 BoxCollider2D:

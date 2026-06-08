@@ -1,11 +1,14 @@
+using NUnit.Framework;
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class moveEnemy : MonoBehaviour
 {
     public Slider UIVida;
+    public RectTransform healthBar;
     private GameObject player;
-
     public EnemyData data;
     private int currentHealth;
 
@@ -26,8 +29,19 @@ public class moveEnemy : MonoBehaviour
         }
         UIVida.maxValue = currentHealth;
         UIVida.value = currentHealth;
+        if (data.enemyType == EnemyType.Basic)
+        {
+            healthBar.anchoredPosition = new Vector2(25f, 300f);
+        }
+        if (data.enemyType == EnemyType.Elite)
+        {
+            healthBar.anchoredPosition = new Vector2(45f, 300f);
+        }
+        if (data.enemyType == EnemyType.Boss)
+        {
+            healthBar.anchoredPosition = new Vector2(45f, 382f);
+        }
     }
-
     // Update is called once per frame
     void Update()
     {
@@ -72,6 +86,11 @@ public class moveEnemy : MonoBehaviour
                     direction * data.KnockBackForce,
                     ForceMode2D.Impulse
                 );
+            }
+            EfectoGolpe efectoGolpe = collision.gameObject.GetComponent<EfectoGolpe>();
+            if (efectoGolpe != null)
+            {
+                efectoGolpe.RecibirGolpe();
             }
         }
     }

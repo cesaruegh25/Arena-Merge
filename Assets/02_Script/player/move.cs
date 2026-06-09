@@ -7,10 +7,13 @@ public class move : MonoBehaviour
     public Vector2 moveInput;
     public Rigidbody2D rb;
     public Vector2 lastDirection;
+    public Animator animator;
+    private bool isMoving = false;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        animator.Play("Idle");
         rb = GetComponent<Rigidbody2D>();
     }
 
@@ -19,9 +22,23 @@ public class move : MonoBehaviour
     {
         if (moveInput != Vector2.zero && GameManager.Instance.isGame)
         {
+            if (!isMoving)
+            {
+                isMoving = true;
+                animator.SetBool("move", isMoving);
+            }
             float speed = GameManager.Instance.speed;
             rb.linearVelocity = new Vector2(moveInput.x * speed, moveInput.y * speed);
-            transform.Translate(new Vector3(moveInput.x, 0, moveInput.y) * Time.deltaTime * speed);
+            //transform.Translate(new Vector3(moveInput.x, 0, moveInput.y) * Time.deltaTime * speed);
+        }
+        else
+        {
+            if (isMoving)
+            {
+                isMoving = false;
+                animator.SetBool("move", isMoving);
+            }
+            rb.linearVelocity = Vector2.zero;
         }
 
         if (moveInput != Vector2.zero)

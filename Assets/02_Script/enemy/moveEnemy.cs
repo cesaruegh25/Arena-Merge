@@ -87,6 +87,7 @@ public class moveEnemy : MonoBehaviour
                     ForceMode2D.Impulse
                 );
             }
+            collision.gameObject.GetComponent<Animator>().SetTrigger("hurt");
             EfectoGolpe efectoGolpe = collision.gameObject.GetComponent<EfectoGolpe>();
             if (efectoGolpe != null)
             {

@@ -14,6 +14,11 @@ public class EnemySpawner : MonoBehaviour
     public Transform player;
     void Start()
     {
+        if (BattleManager.selectedBattle != null)
+        {
+            enemiesToSpawn = BattleManager.selectedBattle.enemiesToSpawn;
+        }
+
         StartCoroutine(SpawnRoutine());
     }
 

@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.UIElements;
 using static UnityEditor.Progress;
 
 public class WeaponBehaviour : MonoBehaviour
@@ -135,6 +136,8 @@ public class WeaponBehaviour : MonoBehaviour
 
     public void SpearAttack()
     {
+        transform.localScale =
+                new Vector3(GameObject.FindGameObjectWithTag("Player").transform.localScale.x * 20 , 2, 2);
         // girar
         float dir =
             clockwise ? -1f : 1f;

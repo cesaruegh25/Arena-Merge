@@ -14,7 +14,10 @@ public class ItemSpawner : MonoBehaviour
     void Start()
     {
         SpawnItems();
-        intentos = 3;
+        if (BattleManager.selectedBattle != null)
+        {
+            intentos = BattleManager.selectedBattle.intentos;
+        }
     }
     public void SpawnItems()
     {

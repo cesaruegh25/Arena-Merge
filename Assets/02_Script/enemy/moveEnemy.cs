@@ -47,7 +47,9 @@ public class moveEnemy : MonoBehaviour
     {
         if (GameManager.Instance.isGame)
         {
-            transform.position = Vector3.MoveTowards(transform.position, player.transform.position, data.velocidad);
+            transform.position = Vector3.MoveTowards(transform.position, 
+                player.transform.position, 
+                data.velocidad);
         }
     }
 

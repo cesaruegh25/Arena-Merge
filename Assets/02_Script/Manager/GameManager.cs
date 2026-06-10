@@ -1,6 +1,7 @@
 using TMPro;
 using Unity.Android.Gradle.Manifest;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
@@ -55,6 +56,7 @@ public class GameManager : MonoBehaviour
         if(health <= 0)
         {
             Time.timeScale = 0; // Detiene el juego
+            SceneManager.LoadScene("Menu");
         }
         if (isGame)
         {
@@ -63,6 +65,7 @@ public class GameManager : MonoBehaviour
             if (time <= 0)
             {
                 Time.timeScale = 0; // Detiene el juego
+                SceneManager.LoadScene("Menu");
             }
         }
     }

@@ -806,10 +806,10 @@ MonoBehaviour:
   UITienda: {fileID: 1088442729}
   UITiempo: {fileID: 1819869379}
   score: 0
-  MaxHealth: 100
+  MaxHealth: 150
   health: 0
   shield: 0
-  speed: 5
+  speed: 7
   time: 120
   isGame: 0
 --- !u!4 &479926365

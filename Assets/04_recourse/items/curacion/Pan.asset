@@ -23,6 +23,6 @@ MonoBehaviour:
   cooldown: 300
   damage: 0
   heal: 20
-  shield: 0
+  shield: 50
   attackRange: 0
   alejar: 10

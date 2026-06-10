@@ -59,7 +59,8 @@ public class moveEnemy : MonoBehaviour
         UIVida.value = currentHealth;
         if (currentHealth <= 0)
         {
-            GameManager.Instance.score += data.scoreValue;
+            GameManager.Instance.Score(data.scoreValue);
+            EnemySpawner.Instance.EnemyDied();
             Destroy(gameObject);
         }
     } 

@@ -1,6 +1,7 @@
 using System.Collections;
 using Unity.Android.Gradle.Manifest;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using static UnityEditor.Progress;
 
 public class EnemySpawner : MonoBehaviour
@@ -12,6 +13,16 @@ public class EnemySpawner : MonoBehaviour
     public float delayBetweenSpawns = 0.5f;
 
     public Transform player;
+
+
+    public static EnemySpawner Instance;
+    private int spawnCount = 0;
+
+    private void Awake()
+    {
+        Instance = this;
+    }
+
     void Start()
     {
         if (BattleManager.selectedBattle != null)
@@ -61,6 +72,7 @@ public class EnemySpawner : MonoBehaviour
                 randomPos,
                 Quaternion.identity
             );
+        spawnCount++;
 
         // aplicar datos
         moveEnemy me =
@@ -88,5 +100,16 @@ public class EnemySpawner : MonoBehaviour
             bc.size = new Vector2(2f, 4f);
         }
 
+    }
+    public void EnemyDied()
+    {
+        spawnCount--;
+
+        if (spawnCount <= 0)
+        {
+            GameManager.Instance.isGame = false;
+            BattleManager.score += GameManager.Instance.score;
+            SceneManager.LoadScene("EndGame");
+        }
     }
 }

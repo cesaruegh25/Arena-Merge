@@ -206,6 +206,7 @@ public class WeaponBehaviour : MonoBehaviour
     private void MaxHealEffect()
     {
         GameManager.Instance.MaxHealth += data.heal;
+        GameManager.Instance.maxShield += data.shield;
         GameManager.Instance.ActualizarMaxHealth();
     }
     private void DrinkEffect()

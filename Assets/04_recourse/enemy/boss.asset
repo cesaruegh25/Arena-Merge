@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnemyData
   enemyType: 2
   sprite: {fileID: 21300000, guid: 99704d2ea97fd1d41862b469d8cfa40f, type: 3}
-  vida: 1000
+  vida: 750
   velocidad: 0.01
   damage: 100
   KnockBackForce: 30

@@ -1,8 +1,6 @@
 using System.Collections;
-using Unity.Android.Gradle.Manifest;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using static UnityEditor.Progress;
 
 public class EnemySpawner : MonoBehaviour
 {

@@ -1,8 +1,5 @@
-using System;
 using System.Collections;
 using UnityEngine;
-using UnityEngine.UIElements;
-using static UnityEditor.Progress;
 
 public class WeaponBehaviour : MonoBehaviour
 {

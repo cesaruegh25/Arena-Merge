@@ -1,4 +1,3 @@
-using UnityEngine.SocialPlatforms.Impl;
 
 public static class BattleManager
 {

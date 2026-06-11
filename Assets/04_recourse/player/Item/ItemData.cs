@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Audio;
 
 
 public enum ItemType
@@ -38,4 +39,6 @@ public class ItemData : ScriptableObject
     public float attackRange = 2f;
 
     public int alejar = 10;
+
+    public AudioClip attackSound;
 }

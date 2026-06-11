@@ -22,7 +22,7 @@ public class WeaponBehaviour : MonoBehaviour
     private bool clockwise = false;
     private float angle;
     public float startAngle;
-
+    public AudioSource audioSource;
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player")
@@ -176,6 +176,7 @@ public class WeaponBehaviour : MonoBehaviour
         //gameObject.GetComponents<SpriteRenderer>()[0].enabled = true;
         if (GameManager.Instance.shield < 100)
         {
+            audioSource.Play();
             GameManager.Instance.shield += data.shield;
             GameManager.Instance.ActualizarUI();
         }
@@ -192,6 +193,7 @@ public class WeaponBehaviour : MonoBehaviour
         //gameObject.GetComponents<SpriteRenderer>()[0].enabled = true;
         if (GameManager.Instance.MaxHealth > GameManager.Instance.health) 
         {
+            audioSource.Play();
             GameManager.Instance.health += data.heal;
             GameManager.Instance.ActualizarUI();
         }
@@ -252,6 +254,7 @@ public class WeaponBehaviour : MonoBehaviour
                 SpriteRenderer sr = collision.GetComponent<SpriteRenderer>();
                 if (sr != null)
                     StartCoroutine(FlashSprite(sr));
+                audioSource.Play();
                 enemy.TakeDamage(10);
             }
         }

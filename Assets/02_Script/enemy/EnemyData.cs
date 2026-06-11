@@ -11,7 +11,7 @@ public class EnemyData : ScriptableObject
 {
     public EnemyType enemyType;
     public Sprite sprite;
-
+    public AudioClip hurt;
     //animacion ver como ponerla
 
     public int vida = 100;

@@ -16,6 +16,12 @@ IEndDragHandler
 
     Transform tienda;
 
+    public AudioSource pos;
+    public AudioSource drop;
+    public AudioSource level1;
+    public AudioSource level2;
+    public AudioSource level3;
+
     void Awake()
     {
         cg = GetComponent<CanvasGroup>();
@@ -29,6 +35,7 @@ IEndDragHandler
     public void OnBeginDrag(
     PointerEventData eventData)
     {
+        pos.Play();
         startPos = transform.position;
 
         cg.blocksRaycasts = false;
@@ -91,6 +98,7 @@ IEndDragHandler
         // DESPUÉS intentar colocar
         if (GridManager.Instance.CanPlace(item, x, y))
         {
+            level1.Play();
             GridManager.Instance.Place(item, x, y);
 
             transform.SetParent(
@@ -106,6 +114,7 @@ IEndDragHandler
         }
         else
         {
+            drop.Play();
             // volver a tienda
             transform.SetParent(tienda);
 
@@ -145,8 +154,17 @@ IEndDragHandler
     {
         if (item.data.nextLevelItem == null)
             return;
-
-        Debug.Log("Fusionando " + item.data.itemName + " con " + other.item.data.itemName);
+        if (item.data.level == 1)
+        {
+            level2.Play();
+            Debug.Log("Fusionando nivel 1");
+        }
+        if (item.data.level == 2)
+        {
+            level3.Play();
+            Debug.Log("Fusionando nivel 2");
+        }
+        //Debug.Log("Fusionando " + item.data.itemName + " con " + other.item.data.itemName);
 
         Vector3 pos = other.transform.position;
 

@@ -81,6 +81,7 @@ public class GameManager : MonoBehaviour
     }
     public void GameBegin()
     {
+        Time.timeScale = 1;
         LoadoutManager.Instance.SaveInventory();
         UITienda.SetActive(false);
         UIGameplay.SetActive(true);

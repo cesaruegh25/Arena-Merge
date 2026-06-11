@@ -63,14 +63,18 @@ public class LoadoutManager : MonoBehaviour
                 );
                 Image img =
                     obj.GetComponent<Image>();
-                if (img != null)
-                {
-                    img.sprite = item.spriteBattle;
-                }
+                if (img != null)img.sprite = item.spriteBattle;
+                
+                AudioSource audioSource =
+                    obj.GetComponent<AudioSource>();
+                if (audioSource != null) audioSource.clip = item.attackSound;
                 WeaponBehaviour wb =
                     obj.GetComponent<WeaponBehaviour>();
-
-                wb.data = item;
+                if (wb != null)
+                {
+                    wb.data = item;
+                    wb.audioSource = audioSource;
+                }
             }
             if (item.itemName.Contains("Espada"))
             {
@@ -152,10 +156,18 @@ public class LoadoutManager : MonoBehaviour
                 bc.size = new Vector2(3.8f, 1.25f);
             }
 
+            AudioSource audioSource =
+                obj.GetComponent<AudioSource>();
+            if (audioSource != null) audioSource.clip = item.attackSound;
+
             WeaponBehaviour wb =
                 obj.GetComponent<WeaponBehaviour>();
 
-            wb.data = item;
+            if (wb != null)
+            {
+                wb.data = item;
+                wb.audioSource = audioSource;
+            }
 
             // posición orbital
             float angle =

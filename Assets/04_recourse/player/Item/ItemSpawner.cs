@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class ItemSpawner : MonoBehaviour
@@ -9,6 +10,9 @@ public class ItemSpawner : MonoBehaviour
 
     public int amount = 5;
 
+    public AudioSource audioSource;
+    public TextMeshProUGUI UIReset;
+
     [SerializeField] int intentos;
 
     void Start()
@@ -17,10 +21,12 @@ public class ItemSpawner : MonoBehaviour
         if (BattleManager.selectedBattle != null)
         {
             intentos = BattleManager.selectedBattle.intentos;
+            UIReset.text = intentos.ToString();
         }
     }
     public void SpawnItems()
     {
+        audioSource.Play();
         for (int i = 0; i < amount; i++)
         {
             GameObject obj =
@@ -56,12 +62,14 @@ public class ItemSpawner : MonoBehaviour
         if (intentos > 0)
         {
             intentos--;
+            UIReset.text = intentos.ToString();
             // generar nuevos
             SpawnItems();
         }
         else
         {
             Debug.Log("No more attempts left!");
+            UIReset.text = "0";
         }
     }
 }

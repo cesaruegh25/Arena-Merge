@@ -26,3 +26,4 @@ MonoBehaviour:
   shield: 0
   attackRange: 0
   alejar: 10
+  attackSound: {fileID: 8300000, guid: 152532a9552ed5444822b8de69588793, type: 3}

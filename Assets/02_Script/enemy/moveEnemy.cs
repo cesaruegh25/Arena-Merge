@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using static UnityEditor.Progress;
 
 public class moveEnemy : MonoBehaviour
 {
@@ -12,7 +13,7 @@ public class moveEnemy : MonoBehaviour
     public EnemyData data;
     private int currentHealth;
 
-
+    public AudioSource hurt;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -27,6 +28,12 @@ public class moveEnemy : MonoBehaviour
         {
             sr.sprite = data.sprite;
         }
+
+        AudioSource audioSource =
+            GetComponent<AudioSource>();
+        if (audioSource != null) audioSource.clip = data.hurt;
+        hurt = audioSource;
+
         UIVida.maxValue = currentHealth;
         UIVida.value = currentHealth;
         if (data.enemyType == EnemyType.Basic)
@@ -69,7 +76,7 @@ public class moveEnemy : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-
+            collision.gameObject.GetComponent<AudioSource>().Play();
             GameManager.Instance.PlayerIsDamage(data.damage);
             //Debug.Log("¡El enemigo ha colisionado con el jugador!" + GameManager.Instance.health + "moveEnemy 57");
             GameManager.Instance.ActualizarUI();

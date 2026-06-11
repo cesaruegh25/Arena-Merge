@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Bebida
   m_EditorClassIdentifier: Assembly-CSharp::ItemData
   itemName: Bebida
-  spriteStore: {fileID: 21300000, guid: 2985ccb61f44f9d4faba4264284a4404, type: 3}
-  spriteBattle: {fileID: 21300000, guid: 0fb9129d314c5b3449291755da099a85, type: 3}
+  spriteStore: {fileID: -5237503583753103009, guid: ef6ff913019785b429089a20619bc118, type: 3}
+  spriteBattle: {fileID: 6611063975212234208, guid: 554132849a96f5e46b3e901d9987031b, type: 3}
   width: 1
   height: 2
   level: 1

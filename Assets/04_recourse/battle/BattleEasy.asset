@@ -20,4 +20,4 @@ MonoBehaviour:
     prefab: {fileID: 5317386853567346666, guid: 6f6e7138c23148e459cee1d43acc928d, type: 3}
     amount: 2
   intentos: 5
-  timeLimit: 120
+  timeLimit: 180

@@ -48,7 +48,7 @@ public class moveEnemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (GameManager.Instance.isGame)
+        if (GameManager.Instance.isGame && Time.timeScale == 1f)
         {
             transform.position = Vector3.MoveTowards(transform.position, 
                 player.transform.position, 

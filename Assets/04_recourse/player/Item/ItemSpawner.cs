@@ -52,24 +52,27 @@ public class ItemSpawner : MonoBehaviour
 
     public void ResetShop()
     {
-        // destruir items actuales
-        for (int i = transform.childCount - 1; i >= 0; i--)
+        if (!pauseManager.Instance.isPaused)
         {
-            Destroy(
-                transform.GetChild(i).gameObject
-            );
-        }
-        if (intentos > 0)
-        {
-            intentos--;
-            UIReset.text = intentos.ToString();
-            // generar nuevos
-            SpawnItems();
-        }
-        else
-        {
-            Debug.Log("No more attempts left!");
-            UIReset.text = "0";
+            // destruir items actuales
+            for (int i = transform.childCount - 1; i >= 0; i--)
+            {
+                Destroy(
+                    transform.GetChild(i).gameObject
+                );
+            }
+            if (intentos > 0)
+            {
+                intentos--;
+                UIReset.text = intentos.ToString();
+                // generar nuevos
+                SpawnItems();
+            }
+            else
+            {
+                Debug.Log("No more attempts left!");
+                UIReset.text = "0";
+            }
         }
     }
 }

@@ -61,4 +61,12 @@ public class move : MonoBehaviour
     {
         moveInput = value.Get<Vector2>();
     }
+    public void OnPause(InputValue value)
+    {
+        if (value.isPressed)
+        {
+            pauseManager.Instance.ButtonPause();
+        }
+
+    }
 }
